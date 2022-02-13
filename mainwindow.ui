@@ -6,25 +6,373 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>967</width>
+    <height>703</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="listWidget_availableACK">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>161</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_availableACK">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Доступные АБК</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>50</y>
+      <width>160</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_labels">
+     <item>
+      <widget class="QLabel" name="label_name">
+       <property name="text">
+        <string>Название</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_country">
+       <property name="text">
+        <string>Страна</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_wingspan">
+       <property name="text">
+        <string>Размах крыла, м</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_mass">
+       <property name="text">
+        <string>Масса пустого, кг</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_velocity">
+       <property name="text">
+        <string>Скорость полета, км/ч</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_armamentUnits">
+       <property name="text">
+        <string>Узлы вооружения, шт</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_combatRadius">
+       <property name="text">
+        <string>Боевой радиус, км</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_flightRange">
+       <property name="text">
+        <string>Дальность полета, км</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_cost">
+       <property name="text">
+        <string>Стоимость, млн длр</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>50</y>
+      <width>161</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_characteristics">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_name"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_country"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_wingspan"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_mass"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_velocity"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_armamentUnits"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_combatRadius"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_flightRange"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_cost"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_addACK">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>50</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Добавить АБК</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_deleteACK">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>50</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Удалить АБК</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget_enemy">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>400</y>
+      <width>161</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>CrossCursor</cursorShape>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_enemy">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>370</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Противник</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>400</y>
+      <width>160</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_enemyLabel">
+     <item>
+      <widget class="QLabel" name="label_enemyPar1">
+       <property name="text">
+        <string>Параметр1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_enemyPar2">
+       <property name="text">
+        <string>Параметр2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_enemyPar3">
+       <property name="text">
+        <string>Параметр3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_enemyPar4">
+       <property name="text">
+        <string>Параметр4</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>400</y>
+      <width>161</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_enemyCharacteristics">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_enemyPar1"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_enemyPar2"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_enemyPar3"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_enemyPar4"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_result2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>610</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>АБК</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_result">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>610</y>
+      <width>281</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Итог: наиболее эффективной будет группа из</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_result">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>610</y>
+      <width>41</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_result2">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>610</y>
+      <width>161</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_countGroupACK">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>400</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вычислить наиболее эффективную группу АБК</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>610</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выход</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_clearACK">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>50</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очистить поля</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>967</width>
      <height>25</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
