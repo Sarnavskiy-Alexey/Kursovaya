@@ -32,13 +32,17 @@ private slots:
 
     void on_pushButton_deleteACK_clicked();
 
+    void on_listWidget_enemy_itemSelectionChanged();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase m_db;
 
     void add_T_aviation();
     void FromDB_T_aviation();
+    void FromDB_T_enemy();
     void printAllAircrafts_T_aviation();
+    void printAllEnemies_T_enemy();
 };
 
 typedef struct
@@ -55,6 +59,18 @@ typedef struct
     QString cost;
 } T_aviation;
 
+typedef struct
+{
+    QString key_zrk;
+    QString zrk_name;
+    QString targeting_system;
+    QString min_destr_range;
+    QString max_destr_range;
+    QString AAGM_velocity;
+    QString max_height;
+} T_enemy;
+
 extern QVector<T_aviation> vector_T_aviation;
+extern QVector<T_enemy> vector_T_enemy;
 
 #endif // MAINWINDOW_H

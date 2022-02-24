@@ -12,6 +12,8 @@ CONFIG += c++11
 SOURCES += \
     T_aviation_FromDB.cpp \
     T_aviation_VectorDefine.cpp \
+    T_enemy_FromDB.cpp \
+    T_enemy_VectorDefine.cpp \
     main.cpp \
     mainwindow.cpp
 

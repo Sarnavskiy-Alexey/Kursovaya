@@ -223,30 +223,37 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_enemyLabel">
      <item>
-      <widget class="QLabel" name="label_enemyPar1">
+      <widget class="QLabel" name="label_enemyName">
        <property name="text">
-        <string>Параметр1</string>
+        <string>Название</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_enemyPar2">
+      <widget class="QLabel" name="label_enemyTargetingSystem">
        <property name="text">
-        <string>Параметр2</string>
+        <string>Система наведения</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_enemyPar3">
+      <widget class="QLabel" name="label_enemyDestructionRange">
        <property name="text">
-        <string>Параметр3</string>
+        <string>Дальность поражения, км</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_enemyPar4">
+      <widget class="QLabel" name="label_enemyAAGMVelocity">
        <property name="text">
-        <string>Параметр4</string>
+        <string>Скорость ЗУР, мах</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_enemyMaxHeight">
+       <property name="text">
+        <string>Максимальная высота, км</string>
        </property>
       </widget>
      </item>
@@ -258,21 +265,44 @@
       <x>380</x>
       <y>400</y>
       <width>161</width>
-      <height>161</height>
+      <height>171</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_enemyCharacteristics">
      <item>
-      <widget class="QLineEdit" name="lineEdit_enemyPar1"/>
+      <widget class="QLineEdit" name="lineEdit_enemyName">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_enemyPar2"/>
+      <widget class="QLineEdit" name="lineEdit_enemyTargetingSystem">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_enemyPar3"/>
+      <widget class="QLineEdit" name="lineEdit_enemyDestructionRange">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_enemyPar4"/>
+      <widget class="QLineEdit" name="lineEdit_enemyAAGMVelocity">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_enemyMaxHeight">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -360,6 +390,73 @@
     <property name="text">
      <string>Очистить поля</string>
     </property>
+   </widget>
+   <widget class="QLabel" name="label_limit">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>150</y>
+      <width>158</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ограничения</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>200</y>
+      <width>161</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_limitCharacteristics">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_percentStrImpObjLimit"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_percentAirDefDestrLimit"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_costLimit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>200</y>
+      <width>181</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_limitLabel">
+     <item>
+      <widget class="QLabel" name="label_percentStrImpObjLimit">
+       <property name="text">
+        <string>Процент уничтожения СВО, %</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_percentAirDefDestrLimit">
+       <property name="text">
+        <string>Процент уничтожения ПВО, %</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_costLimit">
+       <property name="text">
+        <string>Стоимость, млн длр</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

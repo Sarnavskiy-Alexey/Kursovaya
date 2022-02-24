@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 QVector<T_aviation> vector_T_aviation;
+QVector<T_enemy> vector_T_enemy;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,8 +17,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     if (!m_db.open())
     {
-        QString error = "Error: can't connected to db!";
-        qDebug() << "Error: can't connected to db!";
+        QString error = "Error: can't connect to db!";
+        qDebug() << "Error: can't connect to db!";
         ui->statusbar->showMessage(error);
     }
     else
@@ -29,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     /* *********** */
     printAllAircrafts_T_aviation();
+    printAllEnemies_T_enemy();
 }
 
 MainWindow::~MainWindow()
@@ -176,3 +178,21 @@ void MainWindow::on_pushButton_deleteACK_clicked()
     }
 }
 
+
+void MainWindow::on_listWidget_enemy_itemSelectionChanged()
+{
+    int i;
+    for (i = 0; i < vector_T_enemy.size(); i++)
+    {
+        if (i == ui->listWidget_enemy->currentRow())
+        {
+            ui->lineEdit_enemyName->setText(vector_T_enemy[i].zrk_name);
+            ui->lineEdit_enemyTargetingSystem->setText(vector_T_enemy[i].targeting_system);
+            ui->lineEdit_enemyDestructionRange->setText("от " + vector_T_enemy[i].min_destr_range + " до " + vector_T_enemy[i].max_destr_range);
+            ui->lineEdit_enemyAAGMVelocity->setText(vector_T_enemy[i].AAGM_velocity);
+            ui->lineEdit_enemyMaxHeight->setText(vector_T_enemy[i].max_height);
+
+            break;
+        }
+    }
+}
