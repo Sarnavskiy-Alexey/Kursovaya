@@ -34,6 +34,12 @@ private slots:
 
     void on_listWidget_enemy_itemSelectionChanged();
 
+    void on_pushButton_addEnemy_clicked();
+
+    void on_pushButton_deleteEnemy_clicked();
+
+    void on_pushButton_clearEnemy_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase m_db;
@@ -43,6 +49,8 @@ private:
     void FromDB_T_enemy();
     void printAllAircrafts_T_aviation();
     void printAllEnemies_T_enemy();
+    bool checkAircrafts_T_aviation();
+    bool checkEnemies_T_enemy();
 };
 
 typedef struct
